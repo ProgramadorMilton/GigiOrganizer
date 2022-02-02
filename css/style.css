@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,700;1,900&display=swap');
+
+*{
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #a76f7c38;
+    width: 100%;   /* Tamanho do conteúdo em largura */
+    max-width: 1280px;   /* largura máxima do conteúda da PAG */
+    margin: auto;     /* Centraliza o conteúdo nomeio da PAG */
+}
+/* <---------- HEADER ----------> */
+/* <--------- Structured Header ----------> */
+.header01{
+    background-color: #CB919E;
+    height: 75px; 
+    width: 100%;   /* Tamanho do conteúdo em largura */
+    max-width: 1280px;   /* largura máxima do conteúda da PAG */  
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-evenly;     /* space-evenly, separando os itens pela width(largura) */
+    align-items: center;
+    margin: auto;
+    position:fixed;
+    z-index: +1;
+}
+.headerMobile{
+    /* bloqueia as mudanças que eu fiz para MOBILE */
+    display: none;
+}
+/* <--------- Logo ----------> */
+#logoHeader{ 
+    height: 100%;
+}
+/* <--------- Menu ----------> */
+nav{
+    /* Pra fazer os itens ficarem centralizados no header em relação a height(altura)*/
+    display: flex;
+    align-items: center;    
+}
+ul{ 
+    text-align: center;
+    list-style: none;     /* list -style retira o style da lista do header */
+    /* Aqui estou colocando os itens na vertical e centralizando os textos */
+    display: flex;
+    flex-direction: row;
+    gap: 15px;     /* Gap entre os itens */
+}
+.menuItens{
+    color: white;
+    border:white, solid;
+    font-weight: 600;
+    font-size: 25px;
+    padding: 7px;
+}
+.menuItens:hover{ 
+    background-color: white; 
+    color: #CB919E;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+/* <--------- MAIN ----------> */
+/* <--------- Structured Personal Organizer ----------> */
+main{
+    overflow: hidden;    
+    /* Mantem o conteúdo preso sem scroll -horizontal-  */
+    padding-top: 75px;
+    padding-bottom: 5px;
+}
+.personalOrganizer{
+    height: 570px;   /* Tamanho do background cinza */
+    overflow: hidden; /* Coloca tudo que está fora da tela invisível */
+    /* Mexer com elementos da Esquerda */
+    display: flex;
+    align-items: center;   /* Coloca todos os 2 blocos left e right no centro em relação a height */
+    justify-content: space-evenly;  /* Coloca os 2 blocos no centro em relação a metade da metade */
+}
+/* <--------- Organizer Left ----------> */
+.gigiMorett{
+    background-color: #A76F7C;
+    height: 100%;
+    width: 40%;
+    /* Esse DISPLAY organiza os itens apenas da left entre eles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#gigiPicture{ 
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border:5px solid #d9d9d973;
+    border-radius: 50%;
+    width: 60%;
+    max-width: 500px;
+}
+.name{
+    color: white;
+    font-size: 85px;
+    text-align: center; /* Alinhamento do texto dentro do background rosa */
+}
+/* <--------- Organizer Right ----------> */
+.backgroundTextHome{
+    background-color: #d9d9d9;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+}
+#pictureOne{
+    /* Como colocar a foto dentro de um espaço */
+    display: block;
+    width: 100%;
+    height: 55%;
+}
+#pictureOne1025px{
+    display: none;
+}
+.text{
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;  
+    gap: 20px; 
+}
+#title{  
+    color: #A76F7C; 
+    font-size: 60px;
+    font-weight: 700;
+}
+#descriptionPersonal{
+    color: #A76F7C;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* <--------- BUDGETS ----------> */
+/* <--------- Structured Services ----------> */
+#budgets{
+    background-color: #a76f7c38;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-top: 75px;
+}
+/* <--------- Structured Left----------> */
+.backgroundLeft{
+    background-color: #CB919E;
+    background-image: url(../assets/gigi_services_background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Posicionamento */
+    display: flex;
+    flex-direction: row;
+}
+.order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+#titleOrder{
+    color: white;
+    white-space: nowrap;
+    font-size: 50px;
+    position:absolute;
+    top: 80px;
+    left: 160px;
+}
+#discriptionOrder{
+    color: white;
+    font-weight: 400;
+    white-space: nowrap;
+    width: 415px;    /* tamanho da descrição */
+    font-size: 22px;
+    position: relative;
+    top: 140px;
+    left: 160px;
+}
+/* <--------- Button Budgets----------> */
+#buttonBudgets{
+    background-color: white; 
+    border-radius: 5px;
+    padding: 10px;
+    color: #CB919E;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    top: 170px;
+    left: 110px;
+}
+#buttonBudgets:hover{
+    background-color: #A76F7C; 
+    color: white;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+/* <--------- Our Services----------> */
+.ourServices{
+    background-color: #d9d9d9;
+    /* Tamanho do fundo cinza */
+    height: 120px;
+    width: 360px;    /* Alterar pra menos depois que mexer na parte da esquerda de Orçamentos */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 443px;     /* Posição do (NOSSOS SERVIÇOS) em relação a altura */
+}
+#titleOurServices{
+    color: #A76F7C;
+    font-size: 40px;
+    white-space: nowrap;
+    padding: 20px;    /* organiza os itens e coloca distanciamento nobackground no (NOSSOS SERVIÇOS) */
+}
+#arrowServices{
+    height: 50px;
+    position: relative;
+    top: 2px;
+}
+/* <--------- Structured do Right----------> */
+#services{
+    display: flex;
+}
+/* <--------- Picture ----------> */
+.backgroundPictureBudgets{
+    background-color: #d9d9d9;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%; 
+}
+.picturesOfServices{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+.photoOfServices{
+    border:3px solid #CB919E;
+    border-radius: 50%;
+    width: 105px;
+}
+/* <--------- Services ----------> */
+.backgroundServices{
+    background-color: #A76F7C;
+    height: 100%;
+    width: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    text-align:left;
+    gap: 33px;
+}
+.titleServices{
+    color: white;
+    font-size: 25px;
+}
+.descriptionServices{
+    color: white;
+    font-size: 20px;
+}
+/* <--------- WORK WITH US ----------> */
+/* <--------- Structured  ----------> */
+#workWithUs{
+    background-color: #a76f7c38;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-top: 75px;
+}
+.backgroundWithUs{
+    background-color: #d9d9d9;
+    background-image: url(../assets/work_with_us_background.svg);
+    background-size: cover;
+    height: 565px;
+    width: 1280px;
+}
+/* <---------- Text -----------> */
+#titleWorkWithUs{
+    color: white;
+    font-size: 65px;
+    font-weight: 600;
+    position: relative;
+    top: 60px;
+    left: 70px;
+}
+#descriptionWorkWithUs{
+    color: #A76F7C;
+    font-size: 20px;
+    font-weight: 400;
+    width: 55vw;
+    position: relative;
+    top: 80px;
+    left: 70px;
+}
+/* <---------- Button Services -----------> */
+#buttonServices{
+    color: #A76F7C;
+}
+#buttonServices:hover{
+    background-color: #A76F7C; 
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    padding: 1.5px;
+    color: white;
+}
+/* <---------- Button Work With Us -----------> */
+#buttonWithUs{
+    background-color: white; 
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 15px;
+    color: #CB919E;
+    font-size: 50px;
+    font-weight: 600;
+    position: relative;
+    top: 120px;
+    left: 70px;
+}
+#buttonWithUs:hover{
+    background-color: #A76F7C; 
+    color: white;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+}
+/* <---------- Description -----------> */
+#descriptionFacebook{
+    color: #A76F7C;
+    font-size: 30px;
+    font-weight: 600;
+    width: 450px;
+    position: relative;
+    top: 260px;
+    left: 70px;
+}
+/* <---------- Button Facebook -----------> */
+#facebook{
+    background-color: white;
+    color: #A76F7C;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    left: 10px;
+}
+#facebook:hover{
+    background-color: #A76F7C; 
+    color: white;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 3px;
+    padding: 1.5px;
+}
+/* <--------- FEEDBACKS ----------> */
+/* <--------- Structured Feedbacks ----------> */
+#feedbacks{
+    background-color: #a76f7c38;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-top: 75px;
+}
+.backgroundFeedbacks{
+    background-color: #CB919E;
+    background-size: cover;
+    height: 570px;
+    width: 1280px;
+}
+/* <--------- Title ----------> */
+#titleFeedbacks{
+    background-color: #d9d9d9;
+    color: #A76F7C;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+/* <--------- Group ----------> */
+.groupFeedbacks{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 45px;
+}
+/* <--------- Blocks ----------> */
+.comentFeedbacks01{
+    color: white;
+    background-color: #A76F7C;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+}
+.comentFeedbacks02{
+    color: white;
+    background-color: #A76F7C;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+}
+/* <--------- Container Feedbacks ----------> */
+.menssageFeedbacks{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.nameFeedbacks{
+    font-size: 24px;
+    font-weight: 600;
+}
+.descriptionFeedbacks{
+    font-size: 18px;
+    width: 300px;
+}
+/* <--------- FOOTER ----------> */
+/* <--------- Structured Footer ----------> */
+footer{  
+    background-color: #A76F7C;
+    height: 85px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 30px;
+}
+/* <--------- Description Footer ----------> */
+.descriptionFooter{
+    color: white;
+    font-weight: 400;
+}
+/* <--------- Creator ----------> */
+#creator{
+    color: #d9d9d9;
+    font-weight: 600;
+}
+#creator:hover{
+    color: #A76F7C;
+    background-color: #d9d9d9; 
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 4px;
+    padding: 4px;
+}
+/* ========== MEDIA QUERIES HEADER ========== */
+@media screen and (max-width: 747px) {
+    /* <--------- HEADER ----------> */ 
+    /* <--------- Structured Header ----------> */
+    ul{ 
+        gap: 5px;     /* Gap entre os itens */
+    }
+    .headerMobile{
+        display: none;
+    }
+    .menuItens{
+        display: block;
+        font-size: 20px;
+        padding: 7px;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* <---------- HEADER ----------> */
+    /* <--------- Structured Header ----------> */
+    .headerMobile{
+        background-color: #CB919E;  
+        height: 100px; 
+        width: 100%;   /* Tamanho do conteúdo em largura */
+        max-width: 1280px;   /* largura máxima do conteúda da PAG */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;     /* space-evenly, separando os itens pela width(largura) */
+        align-items: center;
+        white-space: nowrap;
+        margin: auto;
+        position:fixed;
+        z-index: +1;
+    }
+    .header01{
+        display: none;
+    }
+    /* <--------- Logo ----------> */
+    #logoHeader{ 
+        height: 90%;
+    }
+    /* <--------- Menu ----------> */
+    ul{ 
+        display: flex;
+        gap: 17px;     /* Gap entre os itens */
+    }
+    .menuItens{
+        font-size: 23px;
+        padding: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+/* ========== MEDIA QUERIES PERSONAL ORGANIZER ========== */
+@media screen and (max-width: 1025px) {
+    /* <--------- MAIN ----------> */
+    /* <--------- Structured Personal Organizer ----------> */
+    .personalOrganizer{
+        height: 570px;   /* Tamanho do background cinza */
+        overflow: hidden; /* Coloca tudo que está fora da tela invisível */
+        /* Mexer com elementos da Esquerda */
+        display: flex;
+        align-items: center;   /* Coloca todos os 2 blocos left e right no centro em relação a height */
+        justify-content: space-evenly;  /* Coloca os 2 blocos no centro em relação a metade da metade */
+    }
+    /* <--------- Organizer Left ----------> */
+    .gigiMorett{
+        background-color: #A76F7C;
+        height: 100%;
+        width: 40%;
+        /* Esse DISPLAY organiza os itens apenas da left entre eles */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    #gigiPicture{ 
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+        border:5px solid #d9d9d973;
+        border-radius: 50%;
+        width: 60%;
+        max-width: 500px;
+    }
+    .name{
+        color: white;
+        font-size: 70px;
+        text-align: center; /* Alinhamento do texto dentro do background rosa */
+    }
+    /* <--------- Organizer Right ----------> */
+    .backgroundTextHome{
+        background-color: #d9d9d9;
+        height: 100%;
+        width: 60%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    #pictureOne{
+        display: none;
+    }
+    #pictureOne1025px{
+    /* Como colocar a foto dentro de um espaço */
+    display: block;
+    width: 100%;
+    height: 51%;
+    }
+    #descriptionPersonal{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media screen and (max-width: 856px) {
+    /* <--------- MAIN ----------> */
+    /* <--------- Structured Personal Organizer ----------> */
+    main{
+        /* Mantem o conteúdo preso sem scroll -horizontal-  */
+        padding-top: 75px;
+        padding-bottom: 5px;
+    }
+    .personalOrganizer{
+        height: 100%;   /* Tamanho do background cinza */
+        overflow: hidden; /* Coloca tudo que está fora da tela invisível */
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* Coloca todos os 2 blocos left e right no centro em relação a height */
+        justify-content: space-evenly;  /* Coloca os 2 blocos no centro em relação a metade da metade */
+    }
+    /* <--------- Organizer 1 ----------> */
+    .gigiMorett{
+        background-color: #A76F7C;
+        height: 570px;
+        width: 100%;
+        padding-top: 6vh;
+        padding-bottom: 4vh;
+        /* Esse DISPLAY organiza os itens apenas da left entre eles */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 3vh;
+    }
+    #gigiPicture{ 
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+        border:5px solid #d9d9d973;
+        border-radius: 50%;
+        width: 40%;
+        max-width: 500px;
+    }
+    .name{
+        color: white;
+        font-size: 15vw;
+        text-align: center; /* Alinhamento do texto dentro do background rosa */
+    }
+    /* <--------- Organizer 2 ----------> */
+    .backgroundTextHome{
+        background-color: #d9d9d9;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    #pictureOne{
+        display: none;
+    }
+    #pictureOne1025px{
+        /* Como colocar a foto dentro de um espaço */
+        display: block;
+        width: 150%;
+    }
+    .text{
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 100%;
+        height: 60%;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;  
+        gap: 20px; 
+    }
+    #title{  
+        color: #A76F7C; 
+        font-size: 60px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    #descriptionPersonal{
+        color: #A76F7C;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1279px) {
+    /* ========== MEDIA QUERIES BUDGETS ========== */
+    /* <--------- BUDGETS ----------> */
+    /* <--------- Structured Services ----------> */
+    #budgets{
+        background-color: #a76f7c38;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+    }
+    /* <--------- Structured Left----------> */
+    .backgroundLeft{
+        background-color: #CB919E;
+        background-image: url(../assets/gigi_services_background.svg);
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: 0;
+        height: 600px;
+        /* Posicionamento */
+        display: flex;
+        flex-direction: column;
+    }
+    .order{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 37px;
+        position: relative;
+    }
+    #titleOrder{
+        color: white;
+        white-space: nowrap;
+        font-size: 50px;
+        position:absolute;
+        top: 80px;
+        left: 20px;
+    }
+    #discriptionOrder{
+        color: white;
+        font-weight: 400;
+        white-space: nowrap;
+        width: 415px;    /* tamanho da descrição */
+        font-size: 22px;
+        position: absolute;
+        top: 140px;
+        left: 20px;
+    }
+    /* <--------- Button Budgets----------> */
+    #buttonBudgets{
+        background-color: white; 
+        border-radius: 5px;
+        padding: 10px;
+        color: #CB919E;
+        font-size: 40px;
+        font-weight: 600;
+        position: relative;
+        top: 170px;
+        left: -0.5vw;
+    }
+    #buttonBudgets:hover{
+        background-color: #A76F7C; 
+        color: white;
+        box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    }
+    /* <--------- Our Services----------> */
+    .ourServices{
+        background-color: #d9d9d9;
+        /* Tamanho do fundo cinza */
+        height: 120px;
+        width: 360px;    /* Alterar pra menos depois que mexer na parte da esquerda de Orçamentos */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        top: 443px;     /* Posição do (NOSSOS SERVIÇOS) em relação a altura */
+    }
+    #titleOurServices{
+        color: #A76F7C;
+        font-size: 40px;
+        white-space: nowrap;
+        padding: 20px;    /* organiza os itens e coloca distanciamento nobackground no (NOSSOS SERVIÇOS) */
+    }
+    #arrowServices{
+        height: 50px;
+        position: relative;
+        top: 2px;
+    }
+    /* <--------- Structured do Right----------> */
+    #services{
+        display: flex;
+    }
+    /* <--------- Picture ----------> */
+    .backgroundPictureBudgets{
+        background-color: #d9d9d9;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1%;
+        padding-bottom: 1%; 
+    }
+    .picturesOfServices{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+    }
+    .photoOfServices{
+        border:3px solid #CB919E;
+        border-radius: 50%;
+        width: 105px;
+    }
+    /* <--------- Services ----------> */
+    .backgroundServices{
+        background-color: #A76F7C;
+        height: 100%;
+        width: 400px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5%;
+        display: flex;
+        flex-direction:column;
+        align-items: flex-start;
+        text-align:left;
+        gap: 33px;
+    }
+    .titleServices{
+        color: white;
+        font-size: 25px;
+    }
+    .descriptionServices{
+        color: white;
+        font-size: 20px;
+    }
+}
